@@ -1,0 +1,18 @@
+# build outputs
+*.exe
+*.out
+a.out
+*.o
+*.obj
+*.pdb
+*.ilk
+build/
+
+# editor settings (tasks.json holds a machine-specific compiler path)
+.vscode/
+
+# Personal Progress
+ROADMAP.md
+
+# files written by section 16 of the cheatsheet if a run is interrupted
+cheatsheet_demo.*
