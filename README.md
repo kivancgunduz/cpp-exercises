@@ -11,7 +11,7 @@ check.hpp                tiny test helper: CHECK, CHECK_NEAR, report()
 run.sh                   build and run one file (Linux, macOS, WSL)
 run.bat                  the same for Windows
 phase1_basics/
-  cheatsheat.cpp         the main file, 17 sections (table below)
+  cheatsheet.cpp         the main file, 17 sections (table below)
   NOTES.md               Python to C++ notes
   ex1_1_stats.cpp        mean, median, standard deviation
   ex1_2_wordfreq.cpp     word counts and top-k
@@ -27,10 +27,10 @@ You need a C++17 compiler: g++ 9 or newer, clang 10 or newer, or Visual Studio 2
 On Linux, macOS or WSL:
 
 ```bash
-./run.sh phase1_basics/cheatsheat.cpp           # every section
-./run.sh phase1_basics/cheatsheat.cpp 7         # only section 7
-./run.sh phase1_basics/cheatsheat.cpp 7 ex      # section 7 and its exercises
-./run.sh phase1_basics/cheatsheat.cpp all ex    # everything
+./run.sh phase1_basics/cheatsheet.cpp           # every section
+./run.sh phase1_basics/cheatsheet.cpp 7         # only section 7
+./run.sh phase1_basics/cheatsheet.cpp 7 ex      # section 7 and its exercises
+./run.sh phase1_basics/cheatsheet.cpp all ex    # everything
 ```
 
 `run.sh` builds with AddressSanitizer and UBSan. If I read past the end of an array or touch freed memory, the program stops and shows the line, instead of quietly printing garbage. I'd keep them on while learning.
@@ -38,7 +38,7 @@ On Linux, macOS or WSL:
 On Windows:
 
 ```bat
-run.bat phase1_basics\cheatsheat.cpp 7 ex
+run.bat phase1_basics\cheatsheet.cpp 7 ex
 ```
 
 It uses `g++` if it's on your PATH (MinGW builds don't support the sanitizers). Otherwise it uses `cl` from a Visual Studio Developer Command Prompt.
@@ -47,7 +47,7 @@ Every run ends with a line like `[ OK ] 288 passed, 0 failed`. A failing check p
 
 ## The cheatsheet
 
-`cheatsheat.cpp` is one big file on purpose. Each section is a namespace with example code (Python equivalents in the comments), a `demo()` that checks its own claims with `CHECK`, and an `exercises()` function that tests code I still have to write.
+`cheatsheet.cpp` is one big file on purpose. Each section is a namespace with example code (Python equivalents in the comments), a `demo()` that checks its own claims with `CHECK`, and an `exercises()` function that tests code I still have to write.
 
 The exercises fail until I implement them. With all the TODOs still empty, `all ex` reports 69 failures. I'm working that down to zero, roughly a section a day.
 
